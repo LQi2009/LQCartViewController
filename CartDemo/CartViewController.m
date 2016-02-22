@@ -382,10 +382,19 @@
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"确定要删除该商品?删除后无法恢复!" preferredStyle:1];
         UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             
+            CartModel *model = [dataArray objectAtIndex:indexPath.row];
             
             [dataArray removeObjectAtIndex:indexPath.row];
             //    删除
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            
+            //判断是否选择
+            if ([selectGoods containsObject:model]) {
+                //从已选中删除,重新计算价格
+                [selectGoods removeObject:model];
+                [self countPrice];
+            }
+            
             //延迟0.5s刷新一下,否则数据会乱
             [self performSelector:@selector(reloadTable) withObject:nil afterDelay:0.5];
             
