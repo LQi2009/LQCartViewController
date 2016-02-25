@@ -15,8 +15,7 @@
 #define SCREEN_WIDTH [[UIScreen mainScreen]bounds].size.width
 
 
-@interface CartViewController ()<UITableViewDataSource,UITableViewDelegate>
-{
+@interface CartViewController ()<UITableViewDataSource,UITableViewDelegate> {
     UITableView *myTableView;
     //全选按钮
     UIButton *selectAll;
@@ -31,13 +30,11 @@
     UILabel *priceLabel;
 }
 
-
 @end
 
 @implementation CartViewController
 
--(void)viewWillAppear:(BOOL)animated
-{
+-(void)viewWillAppear:(BOOL)animated {
     //每次进入购物车的时候把选择的置空
     [selectGoods removeAllObjects];
     isSelect = NO;
@@ -52,8 +49,7 @@
  *
  *  计算已选中商品金额
  */
--(void)countPrice
-{
+-(void)countPrice {
     double totlePrice = 0.0;
     
     for (CartModel *model in selectGoods) {
@@ -70,8 +66,7 @@
  *
  *  创建测试数据源
  */
--(void)creatData
-{
+-(void)creatData {
     for (int i = 0; i < 10; i++) {
         CartModel *model = [[CartModel alloc]init];
         
@@ -87,9 +82,7 @@
     
     if (myTableView) {
         [myTableView reloadData];
-    }
-    else
-    {
+    } else {
         [self setupMainView];
     }
 }
@@ -106,37 +99,8 @@
     self.title = @"购物车";
 }
 
--(void)selectAllBtnClick:(UIButton*)button
-{
-    //点击全选时,把之前已选择的全部删除
-    [selectGoods removeAllObjects];
-    
-    button.selected = !button.selected;
-    isSelect = button.selected;
-    if (isSelect) {
-        
-        for (CartModel *model in dataArray) {
-            [selectGoods addObject:model];
-        }
-    }
-    else
-    {
-        [selectGoods removeAllObjects];
-    }
-    
-    [myTableView reloadData];
-    [self countPrice];
-}
-
-//提交订单
--(void)goPayBtnClick
-{
-    NSLog(@"去结算");
-}
-
 #pragma mark - 设置底部视图
--(void)setupBottomView
-{
+-(void)setupBottomView {
     //底部视图的 背景
     UIView *bgView = [[UIView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - 50, SCREEN_WIDTH, 50)];
     [self.view addSubview:bgView];
@@ -220,8 +184,7 @@
         [self cartEmptyShow];
     }
     //当购物车不为空时,tableView展示
-    else
-    {
+    else {
         UIView *vi = [self.view viewWithTag:TAG_BACKGROUNDVIEW];
         [vi removeFromSuperview];
         
@@ -236,11 +199,9 @@
         
         [self setupBottomView];
     }
-    
 }
 //购物车为空时的默认视图
--(void)cartEmptyShow
-{
+-(void)cartEmptyShow {
     
     //默认视图背景
     UIView *backgroundView = [[UIView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 64)];
@@ -270,21 +231,14 @@
     [btn setTitle:@"去定制" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(goToMainmenuView) forControlEvents:UIControlEventTouchUpInside];
     [backgroundView addSubview:btn];
-    
-}
--(void)goToMainmenuView
-{
-    NSLog(@"去首页");
-}
-#pragma mark - tableView 数据源方法
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return dataArray.count;
-    
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+#pragma mark - tableView 数据源方法
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return dataArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CartTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
     if (!cell) {
         cell = [[CartTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellID"];
@@ -302,17 +256,13 @@
         
         if (isSelec) {
             [selectGoods addObject:[dataArray objectAtIndex:indexPath.row]];
-        }
-        else
-        {
+        } else {
             [selectGoods removeObject:[dataArray objectAtIndex:indexPath.row]];
         }
         
         if (selectGoods.count == dataArray.count) {
             selectAll.selected = YES;
-        }
-        else
-        {
+        } else {
             selectAll.selected = NO;
         }
         
@@ -366,17 +316,11 @@
     return cell;
 }
 
--(void)reloadTable
-{
-    [myTableView reloadData];
-}
-
--(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
     return @"删除";
 }
--(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"确定要删除该商品?删除后无法恢复!" preferredStyle:1];
@@ -406,6 +350,38 @@
         [alert addAction:cancel];
         [self presentViewController:alert animated:YES completion:nil];
     }
+}
+
+-(void)selectAllBtnClick:(UIButton*)button {
+    //点击全选时,把之前已选择的全部删除
+    [selectGoods removeAllObjects];
+    
+    button.selected = !button.selected;
+    isSelect = button.selected;
+    if (isSelect) {
+        
+        for (CartModel *model in dataArray) {
+            [selectGoods addObject:model];
+        }
+    } else {
+        [selectGoods removeAllObjects];
+    }
+    
+    [myTableView reloadData];
+    [self countPrice];
+}
+
+//提交订单
+-(void)goPayBtnClick {
+    NSLog(@"去结算");
+}
+
+-(void)goToMainmenuView {
+    NSLog(@"去首页");
+}
+
+-(void)reloadTable {
+    [myTableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -38,8 +38,7 @@
     // Configure the view for the selected state
 }
 
--(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.backgroundColor = RGBCOLOR(245, 246, 248);
@@ -48,8 +47,7 @@
     return self;
 }
 //选中按钮点击事件
--(void)selectBtnClick:(UIButton*)button
-{
+-(void)selectBtnClick:(UIButton*)button {
     button.selected = !button.selected;
     if (self.cartBlock) {
         self.cartBlock(button.selected);
@@ -57,23 +55,20 @@
 }
 
 // 数量加按钮
--(void)addBtnClick
-{
+-(void)addBtnClick {
     if (self.numAddBlock) {
         self.numAddBlock();
     }
 }
 
 //数量减按钮
--(void)cutBtnClick
-{
+-(void)cutBtnClick {
     if (self.numCutBlock) {
         self.numCutBlock();
     }
 }
 
--(void)reloadDataWith:(CartModel*)model
-{
+-(void)reloadDataWith:(CartModel*)model {
 
     self.imageView_cell.image = model.image;
     self.nameLabel.text = model.nameStr;
@@ -84,8 +79,8 @@
     self.selectBtn.selected = self.isSelected;
 
 }
--(void)setupMainView
-{
+
+-(void)setupMainView {
     //白色背景
     UIView *bgView = [[UIView alloc]init];
     bgView.backgroundColor = [UIColor whiteColor];
