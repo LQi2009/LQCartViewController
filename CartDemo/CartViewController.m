@@ -266,6 +266,7 @@
             selectAll.selected = NO;
         }
         
+        isSelect = selectAll.selected;
         [self countPrice];
     };
     __block CartTableViewCell *weakCell = cell;
