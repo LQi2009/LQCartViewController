@@ -340,6 +340,12 @@
                 [self countPrice];
             }
             
+            if (selectGoods.count == dataArray.count) {
+                selectAll.selected = YES;
+            } else {
+                selectAll.selected = NO;
+            }
+            
             //延迟0.5s刷新一下,否则数据会乱
             [self performSelector:@selector(reloadTable) withObject:nil afterDelay:0.5];
             
