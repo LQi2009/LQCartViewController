@@ -194,13 +194,7 @@
 		913E71E51C755FEB006EECF7 /* Cart */ = {
 			isa = PBXGroup;
 			children = (
-				913E71F21C756BE4006EECF7 /* cart_addBtn_highlight@2x.png */,
-				913E71F31C756BE4006EECF7 /* cart_addBtn_nomal@2x.png */,
-				913E71F41C756BE4006EECF7 /* cart_cutBtn_highlight@2x.png */,
-				913E71F51C756BE4006EECF7 /* cart_cutBtn_nomal@2x.png */,
-				913E71F61C756BE4006EECF7 /* cart_default_bg.png */,
-				913E71F71C756BE4006EECF7 /* cart_selected_btn@2x.png */,
-				913E71F81C756BE4006EECF7 /* cart_unSelect_btn@2x.png */,
+				9141AC121CBE27C300A43713 /* icons */,
 				913E71EC1C756056006EECF7 /* CartModel.h */,
 				913E71ED1C756056006EECF7 /* CartModel.m */,
 				913E71E91C756029006EECF7 /* CartTableViewCell.h */,
@@ -209,6 +203,20 @@
 				913E71F01C756345006EECF7 /* CartViewController.m */,
 			);
 			name = Cart;
+			sourceTree = "<group>";
+		};
+		9141AC121CBE27C300A43713 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				913E71F21C756BE4006EECF7 /* cart_addBtn_highlight@2x.png */,
+				913E71F31C756BE4006EECF7 /* cart_addBtn_nomal@2x.png */,
+				913E71F41C756BE4006EECF7 /* cart_cutBtn_highlight@2x.png */,
+				913E71F51C756BE4006EECF7 /* cart_cutBtn_nomal@2x.png */,
+				913E71F61C756BE4006EECF7 /* cart_default_bg.png */,
+				913E71F71C756BE4006EECF7 /* cart_selected_btn@2x.png */,
+				913E71F81C756BE4006EECF7 /* cart_unSelect_btn@2x.png */,
+			);
+			name = icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

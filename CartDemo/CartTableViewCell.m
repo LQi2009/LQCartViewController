@@ -158,12 +158,13 @@
     
 #pragma mark - 添加约束
 
+    __weak typeof(self)ws = self;
     //白色背景
     [bgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self).offset(10);
-        make.top.equalTo(self).offset(10);
-        make.bottom.equalTo(self);
-        make.right.equalTo(self).offset(-10);
+        make.left.equalTo(ws).offset(10);
+        make.top.equalTo(ws).offset(10);
+        make.bottom.equalTo(ws);
+        make.right.equalTo(ws).offset(-10);
         
     }];
     
@@ -178,7 +179,7 @@
     //图片背景
     [imageBgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(bgView).offset(5);
-        make.left.equalTo(self.selectBtn.mas_right).offset(5);
+        make.left.equalTo(ws.selectBtn.mas_right).offset(5);
         make.bottom.equalTo(bgView).offset(-5);
         make.width.equalTo(imageBgView.mas_height);
     }];
@@ -193,15 +194,15 @@
         make.left.equalTo(imageBgView.mas_right).offset(10);
         make.top.equalTo(bgView).offset(10);
         make.height.equalTo(@30);
-        make.width.equalTo(self.priceLabel);
+        make.width.equalTo(ws.priceLabel);
     }];
     
     //商品尺寸
     [self.sizeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(imageBgView.mas_right).offset(5);
-        make.top.equalTo(self.nameLabel.mas_bottom).offset(5);
+        make.top.equalTo(ws.nameLabel.mas_bottom).offset(5);
         make.height.equalTo(@20);
-        make.width.equalTo(self.nameLabel);
+        make.width.equalTo(ws.nameLabel);
     }];
     
     //时间
@@ -214,10 +215,10 @@
     
     //商品价格
     [self.priceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.nameLabel.mas_right).offset(5);
+        make.left.equalTo(ws.nameLabel.mas_right).offset(5);
         make.right.equalTo(bgView);
         make.top.equalTo(bgView).offset(10);
-        make.width.equalTo(self.nameLabel);
+        make.width.equalTo(ws.nameLabel);
     }];
     
     //数量加按钮
@@ -238,7 +239,7 @@
     
     //数量减按钮
     [cutBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.numberLabel.mas_left);
+        make.right.equalTo(ws.numberLabel.mas_left);
         make.height.equalTo(addBtn);
         make.width.equalTo(addBtn);
         make.bottom.equalTo(addBtn);

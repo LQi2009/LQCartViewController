@@ -228,7 +228,7 @@
     btn.center = CGPointMake(SCREEN_WIDTH/2.0, SCREEN_HEIGHT/2.0 + 40);
     btn.bounds = CGRectMake(0, 0, SCREEN_WIDTH - 40, 40);
     [btn setBackgroundImage:[UIImage imageNamed:@"btn_background_red"] forState:UIControlStateNormal];
-    [btn setTitle:@"去定制" forState:UIControlStateNormal];
+    [btn setTitle:@"去购买" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(goToMainmenuView) forControlEvents:UIControlEventTouchUpInside];
     [backgroundView addSubview:btn];
 }
