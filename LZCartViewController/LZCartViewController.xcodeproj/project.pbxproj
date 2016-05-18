@@ -1,0 +1,626 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9148CA671CEBFC8B0054A40A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9148CA661CEBFC8B0054A40A /* main.m */; };
+		9148CA6A1CEBFC8B0054A40A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9148CA691CEBFC8B0054A40A /* AppDelegate.m */; };
+		9148CA6D1CEBFC8B0054A40A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9148CA6C1CEBFC8B0054A40A /* ViewController.m */; };
+		9148CA701CEBFC8B0054A40A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9148CA6E1CEBFC8B0054A40A /* Main.storyboard */; };
+		9148CA721CEBFC8C0054A40A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9148CA711CEBFC8C0054A40A /* Assets.xcassets */; };
+		9148CA751CEBFC8C0054A40A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9148CA731CEBFC8C0054A40A /* LaunchScreen.storyboard */; };
+		9148CA801CEBFC8C0054A40A /* LZCartViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9148CA7F1CEBFC8C0054A40A /* LZCartViewControllerTests.m */; };
+		9148CA8B1CEBFC8C0054A40A /* LZCartViewControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9148CA8A1CEBFC8C0054A40A /* LZCartViewControllerUITests.m */; };
+		9148CA9B1CEBFCCB0054A40A /* LZCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9148CA9A1CEBFCCB0054A40A /* LZCartViewController.m */; };
+		9148CAA01CEBFD2F0054A40A /* LZCartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9148CA9F1CEBFD2F0054A40A /* LZCartModel.m */; };
+		9148CAA31CEBFD540054A40A /* LZCartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9148CAA21CEBFD540054A40A /* LZCartTableViewCell.m */; };
+		9148CAAC1CEBFEC00054A40A /* cart_addBtn_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9148CAA51CEBFEC00054A40A /* cart_addBtn_highlight@2x.png */; };
+		9148CAAD1CEBFEC00054A40A /* cart_addBtn_nomal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9148CAA61CEBFEC00054A40A /* cart_addBtn_nomal@2x.png */; };
+		9148CAAE1CEBFEC00054A40A /* cart_cutBtn_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9148CAA71CEBFEC00054A40A /* cart_cutBtn_highlight@2x.png */; };
+		9148CAAF1CEBFEC00054A40A /* cart_cutBtn_nomal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9148CAA81CEBFEC00054A40A /* cart_cutBtn_nomal@2x.png */; };
+		9148CAB01CEBFEC00054A40A /* cart_default_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9148CAA91CEBFEC00054A40A /* cart_default_bg.png */; };
+		9148CAB11CEBFEC00054A40A /* cart_selected_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9148CAAA1CEBFEC00054A40A /* cart_selected_btn@2x.png */; };
+		9148CAB21CEBFEC00054A40A /* cart_unSelect_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9148CAAB1CEBFEC00054A40A /* cart_unSelect_btn@2x.png */; };
+		9148CAB61CEC07520054A40A /* back_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9148CAB51CEC07520054A40A /* back_button@2x.png */; };
+		9148CAB91CEC396F0054A40A /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9148CAB81CEC396F0054A40A /* UIViewExt.m */; };
+		916D53911CEC678E00ECD434 /* aaa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 916D53901CEC678E00ECD434 /* aaa.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9148CA7C1CEBFC8C0054A40A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9148CA5A1CEBFC8B0054A40A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9148CA611CEBFC8B0054A40A;
+			remoteInfo = LZCartViewController;
+		};
+		9148CA871CEBFC8C0054A40A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9148CA5A1CEBFC8B0054A40A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9148CA611CEBFC8B0054A40A;
+			remoteInfo = LZCartViewController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9148CA621CEBFC8B0054A40A /* LZCartViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZCartViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9148CA661CEBFC8B0054A40A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9148CA681CEBFC8B0054A40A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9148CA691CEBFC8B0054A40A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9148CA6B1CEBFC8B0054A40A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9148CA6C1CEBFC8B0054A40A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9148CA6F1CEBFC8B0054A40A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9148CA711CEBFC8C0054A40A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9148CA741CEBFC8C0054A40A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9148CA761CEBFC8C0054A40A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9148CA7B1CEBFC8C0054A40A /* LZCartViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZCartViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9148CA7F1CEBFC8C0054A40A /* LZCartViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZCartViewControllerTests.m; sourceTree = "<group>"; };
+		9148CA811CEBFC8C0054A40A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9148CA861CEBFC8C0054A40A /* LZCartViewControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZCartViewControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9148CA8A1CEBFC8C0054A40A /* LZCartViewControllerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZCartViewControllerUITests.m; sourceTree = "<group>"; };
+		9148CA8C1CEBFC8C0054A40A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9148CA991CEBFCCB0054A40A /* LZCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCartViewController.h; sourceTree = "<group>"; };
+		9148CA9A1CEBFCCB0054A40A /* LZCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCartViewController.m; sourceTree = "<group>"; };
+		9148CA9E1CEBFD2F0054A40A /* LZCartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCartModel.h; sourceTree = "<group>"; };
+		9148CA9F1CEBFD2F0054A40A /* LZCartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCartModel.m; sourceTree = "<group>"; };
+		9148CAA11CEBFD540054A40A /* LZCartTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCartTableViewCell.h; sourceTree = "<group>"; };
+		9148CAA21CEBFD540054A40A /* LZCartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCartTableViewCell.m; sourceTree = "<group>"; };
+		9148CAA51CEBFEC00054A40A /* cart_addBtn_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cart_addBtn_highlight@2x.png"; sourceTree = "<group>"; };
+		9148CAA61CEBFEC00054A40A /* cart_addBtn_nomal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cart_addBtn_nomal@2x.png"; sourceTree = "<group>"; };
+		9148CAA71CEBFEC00054A40A /* cart_cutBtn_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cart_cutBtn_highlight@2x.png"; sourceTree = "<group>"; };
+		9148CAA81CEBFEC00054A40A /* cart_cutBtn_nomal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cart_cutBtn_nomal@2x.png"; sourceTree = "<group>"; };
+		9148CAA91CEBFEC00054A40A /* cart_default_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cart_default_bg.png; sourceTree = "<group>"; };
+		9148CAAA1CEBFEC00054A40A /* cart_selected_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cart_selected_btn@2x.png"; sourceTree = "<group>"; };
+		9148CAAB1CEBFEC00054A40A /* cart_unSelect_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cart_unSelect_btn@2x.png"; sourceTree = "<group>"; };
+		9148CAB41CEC03530054A40A /* LZConfigFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZConfigFile.h; sourceTree = "<group>"; };
+		9148CAB51CEC07520054A40A /* back_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_button@2x.png"; sourceTree = "<group>"; };
+		9148CAB71CEC396F0054A40A /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		9148CAB81CEC396F0054A40A /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
+		916D53901CEC678E00ECD434 /* aaa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aaa.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9148CA5F1CEBFC8B0054A40A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9148CA781CEBFC8C0054A40A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9148CA831CEBFC8C0054A40A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9148CA591CEBFC8B0054A40A = {
+			isa = PBXGroup;
+			children = (
+				9148CA641CEBFC8B0054A40A /* LZCartViewController */,
+				9148CA7E1CEBFC8C0054A40A /* LZCartViewControllerTests */,
+				9148CA891CEBFC8C0054A40A /* LZCartViewControllerUITests */,
+				9148CA631CEBFC8B0054A40A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9148CA631CEBFC8B0054A40A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9148CA621CEBFC8B0054A40A /* LZCartViewController.app */,
+				9148CA7B1CEBFC8C0054A40A /* LZCartViewControllerTests.xctest */,
+				9148CA861CEBFC8C0054A40A /* LZCartViewControllerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9148CA641CEBFC8B0054A40A /* LZCartViewController */ = {
+			isa = PBXGroup;
+			children = (
+				916D53901CEC678E00ECD434 /* aaa.jpg */,
+				9148CA981CEBFCB00054A40A /* LZCartViewController */,
+				9148CA681CEBFC8B0054A40A /* AppDelegate.h */,
+				9148CA691CEBFC8B0054A40A /* AppDelegate.m */,
+				9148CA6B1CEBFC8B0054A40A /* ViewController.h */,
+				9148CA6C1CEBFC8B0054A40A /* ViewController.m */,
+				9148CA6E1CEBFC8B0054A40A /* Main.storyboard */,
+				9148CA711CEBFC8C0054A40A /* Assets.xcassets */,
+				9148CA731CEBFC8C0054A40A /* LaunchScreen.storyboard */,
+				9148CA761CEBFC8C0054A40A /* Info.plist */,
+				9148CA651CEBFC8B0054A40A /* Supporting Files */,
+			);
+			path = LZCartViewController;
+			sourceTree = "<group>";
+		};
+		9148CA651CEBFC8B0054A40A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9148CA661CEBFC8B0054A40A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9148CA7E1CEBFC8C0054A40A /* LZCartViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				9148CA7F1CEBFC8C0054A40A /* LZCartViewControllerTests.m */,
+				9148CA811CEBFC8C0054A40A /* Info.plist */,
+			);
+			path = LZCartViewControllerTests;
+			sourceTree = "<group>";
+		};
+		9148CA891CEBFC8C0054A40A /* LZCartViewControllerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9148CA8A1CEBFC8C0054A40A /* LZCartViewControllerUITests.m */,
+				9148CA8C1CEBFC8C0054A40A /* Info.plist */,
+			);
+			path = LZCartViewControllerUITests;
+			sourceTree = "<group>";
+		};
+		9148CA981CEBFCB00054A40A /* LZCartViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9148CAB31CEC033C0054A40A /* ConfigFile */,
+				9148CAA41CEBFEA90054A40A /* icons */,
+				9148CA9D1CEBFD160054A40A /* LZCartTableViewCell */,
+				9148CA9C1CEBFCFB0054A40A /* LZCartModel */,
+				9148CA991CEBFCCB0054A40A /* LZCartViewController.h */,
+				9148CA9A1CEBFCCB0054A40A /* LZCartViewController.m */,
+			);
+			path = LZCartViewController;
+			sourceTree = "<group>";
+		};
+		9148CA9C1CEBFCFB0054A40A /* LZCartModel */ = {
+			isa = PBXGroup;
+			children = (
+				9148CA9E1CEBFD2F0054A40A /* LZCartModel.h */,
+				9148CA9F1CEBFD2F0054A40A /* LZCartModel.m */,
+			);
+			path = LZCartModel;
+			sourceTree = "<group>";
+		};
+		9148CA9D1CEBFD160054A40A /* LZCartTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9148CAA11CEBFD540054A40A /* LZCartTableViewCell.h */,
+				9148CAA21CEBFD540054A40A /* LZCartTableViewCell.m */,
+			);
+			path = LZCartTableViewCell;
+			sourceTree = "<group>";
+		};
+		9148CAA41CEBFEA90054A40A /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				9148CAB51CEC07520054A40A /* back_button@2x.png */,
+				9148CAA51CEBFEC00054A40A /* cart_addBtn_highlight@2x.png */,
+				9148CAA61CEBFEC00054A40A /* cart_addBtn_nomal@2x.png */,
+				9148CAA71CEBFEC00054A40A /* cart_cutBtn_highlight@2x.png */,
+				9148CAA81CEBFEC00054A40A /* cart_cutBtn_nomal@2x.png */,
+				9148CAA91CEBFEC00054A40A /* cart_default_bg.png */,
+				9148CAAA1CEBFEC00054A40A /* cart_selected_btn@2x.png */,
+				9148CAAB1CEBFEC00054A40A /* cart_unSelect_btn@2x.png */,
+			);
+			path = icons;
+			sourceTree = "<group>";
+		};
+		9148CAB31CEC033C0054A40A /* ConfigFile */ = {
+			isa = PBXGroup;
+			children = (
+				9148CAB71CEC396F0054A40A /* UIViewExt.h */,
+				9148CAB81CEC396F0054A40A /* UIViewExt.m */,
+				9148CAB41CEC03530054A40A /* LZConfigFile.h */,
+			);
+			path = ConfigFile;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9148CA611CEBFC8B0054A40A /* LZCartViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9148CA8F1CEBFC8C0054A40A /* Build configuration list for PBXNativeTarget "LZCartViewController" */;
+			buildPhases = (
+				9148CA5E1CEBFC8B0054A40A /* Sources */,
+				9148CA5F1CEBFC8B0054A40A /* Frameworks */,
+				9148CA601CEBFC8B0054A40A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LZCartViewController;
+			productName = LZCartViewController;
+			productReference = 9148CA621CEBFC8B0054A40A /* LZCartViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9148CA7A1CEBFC8C0054A40A /* LZCartViewControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9148CA921CEBFC8C0054A40A /* Build configuration list for PBXNativeTarget "LZCartViewControllerTests" */;
+			buildPhases = (
+				9148CA771CEBFC8C0054A40A /* Sources */,
+				9148CA781CEBFC8C0054A40A /* Frameworks */,
+				9148CA791CEBFC8C0054A40A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9148CA7D1CEBFC8C0054A40A /* PBXTargetDependency */,
+			);
+			name = LZCartViewControllerTests;
+			productName = LZCartViewControllerTests;
+			productReference = 9148CA7B1CEBFC8C0054A40A /* LZCartViewControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9148CA851CEBFC8C0054A40A /* LZCartViewControllerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9148CA951CEBFC8C0054A40A /* Build configuration list for PBXNativeTarget "LZCartViewControllerUITests" */;
+			buildPhases = (
+				9148CA821CEBFC8C0054A40A /* Sources */,
+				9148CA831CEBFC8C0054A40A /* Frameworks */,
+				9148CA841CEBFC8C0054A40A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9148CA881CEBFC8C0054A40A /* PBXTargetDependency */,
+			);
+			name = LZCartViewControllerUITests;
+			productName = LZCartViewControllerUITests;
+			productReference = 9148CA861CEBFC8C0054A40A /* LZCartViewControllerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9148CA5A1CEBFC8B0054A40A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Artup;
+				TargetAttributes = {
+					9148CA611CEBFC8B0054A40A = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					9148CA7A1CEBFC8C0054A40A = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 9148CA611CEBFC8B0054A40A;
+					};
+					9148CA851CEBFC8C0054A40A = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 9148CA611CEBFC8B0054A40A;
+					};
+				};
+			};
+			buildConfigurationList = 9148CA5D1CEBFC8B0054A40A /* Build configuration list for PBXProject "LZCartViewController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9148CA591CEBFC8B0054A40A;
+			productRefGroup = 9148CA631CEBFC8B0054A40A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9148CA611CEBFC8B0054A40A /* LZCartViewController */,
+				9148CA7A1CEBFC8C0054A40A /* LZCartViewControllerTests */,
+				9148CA851CEBFC8C0054A40A /* LZCartViewControllerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9148CA601CEBFC8B0054A40A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9148CA751CEBFC8C0054A40A /* LaunchScreen.storyboard in Resources */,
+				9148CAAD1CEBFEC00054A40A /* cart_addBtn_nomal@2x.png in Resources */,
+				9148CA721CEBFC8C0054A40A /* Assets.xcassets in Resources */,
+				9148CAAC1CEBFEC00054A40A /* cart_addBtn_highlight@2x.png in Resources */,
+				9148CAB21CEBFEC00054A40A /* cart_unSelect_btn@2x.png in Resources */,
+				9148CAB11CEBFEC00054A40A /* cart_selected_btn@2x.png in Resources */,
+				9148CAB61CEC07520054A40A /* back_button@2x.png in Resources */,
+				9148CAB01CEBFEC00054A40A /* cart_default_bg.png in Resources */,
+				9148CA701CEBFC8B0054A40A /* Main.storyboard in Resources */,
+				916D53911CEC678E00ECD434 /* aaa.jpg in Resources */,
+				9148CAAF1CEBFEC00054A40A /* cart_cutBtn_nomal@2x.png in Resources */,
+				9148CAAE1CEBFEC00054A40A /* cart_cutBtn_highlight@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9148CA791CEBFC8C0054A40A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9148CA841CEBFC8C0054A40A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9148CA5E1CEBFC8B0054A40A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9148CAB91CEC396F0054A40A /* UIViewExt.m in Sources */,
+				9148CA9B1CEBFCCB0054A40A /* LZCartViewController.m in Sources */,
+				9148CA6D1CEBFC8B0054A40A /* ViewController.m in Sources */,
+				9148CAA01CEBFD2F0054A40A /* LZCartModel.m in Sources */,
+				9148CAA31CEBFD540054A40A /* LZCartTableViewCell.m in Sources */,
+				9148CA6A1CEBFC8B0054A40A /* AppDelegate.m in Sources */,
+				9148CA671CEBFC8B0054A40A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9148CA771CEBFC8C0054A40A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9148CA801CEBFC8C0054A40A /* LZCartViewControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9148CA821CEBFC8C0054A40A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9148CA8B1CEBFC8C0054A40A /* LZCartViewControllerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9148CA7D1CEBFC8C0054A40A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9148CA611CEBFC8B0054A40A /* LZCartViewController */;
+			targetProxy = 9148CA7C1CEBFC8C0054A40A /* PBXContainerItemProxy */;
+		};
+		9148CA881CEBFC8C0054A40A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9148CA611CEBFC8B0054A40A /* LZCartViewController */;
+			targetProxy = 9148CA871CEBFC8C0054A40A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9148CA6E1CEBFC8B0054A40A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9148CA6F1CEBFC8B0054A40A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9148CA731CEBFC8C0054A40A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9148CA741CEBFC8C0054A40A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9148CA8D1CEBFC8C0054A40A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9148CA8E1CEBFC8C0054A40A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9148CA901CEBFC8C0054A40A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LZCartViewController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.artup.LZCartViewController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9148CA911CEBFC8C0054A40A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LZCartViewController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.artup.LZCartViewController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9148CA931CEBFC8C0054A40A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LZCartViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.artup.LZCartViewControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LZCartViewController.app/LZCartViewController";
+			};
+			name = Debug;
+		};
+		9148CA941CEBFC8C0054A40A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LZCartViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.artup.LZCartViewControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LZCartViewController.app/LZCartViewController";
+			};
+			name = Release;
+		};
+		9148CA961CEBFC8C0054A40A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LZCartViewControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.artup.LZCartViewControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LZCartViewController;
+			};
+			name = Debug;
+		};
+		9148CA971CEBFC8C0054A40A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LZCartViewControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.artup.LZCartViewControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LZCartViewController;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9148CA5D1CEBFC8B0054A40A /* Build configuration list for PBXProject "LZCartViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9148CA8D1CEBFC8C0054A40A /* Debug */,
+				9148CA8E1CEBFC8C0054A40A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9148CA8F1CEBFC8C0054A40A /* Build configuration list for PBXNativeTarget "LZCartViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9148CA901CEBFC8C0054A40A /* Debug */,
+				9148CA911CEBFC8C0054A40A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9148CA921CEBFC8C0054A40A /* Build configuration list for PBXNativeTarget "LZCartViewControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9148CA931CEBFC8C0054A40A /* Debug */,
+				9148CA941CEBFC8C0054A40A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9148CA951CEBFC8C0054A40A /* Build configuration list for PBXNativeTarget "LZCartViewControllerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9148CA961CEBFC8C0054A40A /* Debug */,
+				9148CA971CEBFC8C0054A40A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9148CA5A1CEBFC8B0054A40A /* Project object */;
+}
