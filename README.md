@@ -15,7 +15,7 @@
 - 整体布局脱离了对`Masnary`的依赖
 如果需要使用`Masnary`,可重新设置控件坐标
 - 重写了自定义`cell`的对外方法
-减少了不必要的属性暴漏在.h文件,尽量使用方法来调用相关设置,使用更方面,清晰
+减少了不必要的属性暴漏在.h文件,尽量使用方法来调用相关设置,使用更方便,逻辑更清晰
 ```
 @interface LZCartTableViewCell : UITableViewCell
 //商品数量
@@ -62,3 +62,57 @@ BOOL _isHasNavitationController;//是否含有导航
     }
 }
 ```
+#####价格计算
+价格的计算,这里我是直接遍历已选择的数组,取出其中的`Model`来计算的:
+```
+/**
+ *  @author LQQ, 16-02-18 11:02:16
+ *
+ *  计算已选中商品金额
+ */
+-(void)countPrice {
+    double totlePrice = 0.0;
+    
+    for (LZCartModel *model in self.selectedArray) {
+        
+        double price = [model.price doubleValue];
+        
+        totlePrice += price*model.number;
+    }
+    self.totlePriceLabel.text = [NSString stringWithFormat:@"￥%.2f",totlePrice];
+}
+```
+###使用
+使用的时候直接将`demo`中的`LZCartViewController`文件夹下的文件拖进工程即可,注意不能直接使用,要根据自己的需求修改;
+#####关于控制器`LZCartViewController`
+建议直接使用我这个控制器`LZCartViewController`,里面我根据功能划分了几个区域,界面的东西修改为自己需要的,逻辑部分可以不用做太大的修改,添加上与服务器的交互及验证逻辑即可;
+- 关于数据模型`LZCartModel`
+数据模型这里肯定是要根据自己的需求进行定制的,这里我创建的模型是这样的:
+```
+@interface LZCartModel : NSObject
+//自定义模型时,这三个属性必须有
+@property (nonatomic,assign) BOOL select;
+@property (nonatomic,assign) NSInteger number;
+@property (nonatomic,copy) NSString *price;
+//下面的属性可根据自己的需求修改
+@property (nonatomic,copy) NSString *sizeStr;
+@property (nonatomic,copy) NSString *nameStr;
+@property (nonatomic,copy) NSString *dateStr;
+@property (nonatomic,retain)UIImage *image;
+
+@end
+```
+需要注意的是,demo中的模型前三个属性,是必须要有的,一般购物车也都有这些属性,如果不想改动太多,建议使用和我一样的命名
+- select:用来记录当前数据是否被选中;
+- number和price:用来计算总价;
+
+#####关于自定义单元格`LZCartTableViewCell`
+建议直接修改界面布局为自己项目的设计,里面大部分的逻辑是不需要动的,除非你把网络请求的一些东西放到`cell`中来了;
+.h文件内的属性和方法,建议不要修改,可以直接使用;
+#####关于`ConfigFile`文件夹
+里面有三个文件,一个是`UIView`的扩展类目;一个是头文件,保存一些公共的宏定义和全局变量;
+###总结
+购物车的逻辑其实并不复杂,但是总体来说还是有一定的逻辑性的,重构这个`demo`也花了不少时间,希望对你能有所帮助,使用过程中如果有bug,或者功能上错误,或者一些新额功能,或者其他的建议,请留言,我会第一时间采纳更新;
+#####如果对你有帮助,欢迎右上角`star`或者`fork`
+#####本人[CSDN博客](http://blog.csdn.net/lqq200912408),欢迎访问,一同学习!!!!
+#####[简书地址](http://www.jianshu.com/users/2846c3d3a974/latest_articles),目前文章还不多,慢慢的会发一些学习总结,欢迎关注!
