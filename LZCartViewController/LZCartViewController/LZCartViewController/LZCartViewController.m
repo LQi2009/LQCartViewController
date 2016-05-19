@@ -108,7 +108,8 @@
         
         totlePrice += price*model.number;
     }
-    self.totlePriceLabel.text = [NSString stringWithFormat:@"￥%.2f",totlePrice];
+    NSString *string = [NSString stringWithFormat:@"￥%.2f",totlePrice];
+    self.totlePriceLabel.attributedText = [self LZSetString:string];
 }
 
 #pragma mark - 初始化数组
@@ -161,6 +162,7 @@
     
     UIView *backgroundView = [[UIView alloc]init];
     backgroundView.backgroundColor = LZColorFromRGB(245, 245, 245);
+    backgroundView.tag = TAG_CartEmptyView + 1;
     [self.view addSubview:backgroundView];
     
     //当有tabBarController时,在tabBar的上面
@@ -203,8 +205,8 @@
     
     label.attributedText = [self LZSetString:@"¥0.00"];
     CGFloat maxWidth = LZSCREEN_WIDTH - selectAll.bounds.size.width - btn.bounds.size.width - 30;
-    CGSize size = [label sizeThatFits:CGSizeMake(maxWidth, LZTabBarHeight)];
-    label.frame = CGRectMake(selectAll.bounds.size.width + 20, 0, size.width + 10, LZTabBarHeight);
+//    CGSize size = [label sizeThatFits:CGSizeMake(maxWidth, LZTabBarHeight)];
+    label.frame = CGRectMake(selectAll.bounds.size.width + 20, 0, maxWidth - 10, LZTabBarHeight);
     self.totlePriceLabel = label;
 }
 
@@ -218,6 +220,15 @@
     return LZString;
 }
 #pragma mark -- 购物车为空时的默认视图
+- (void)changeView {
+    UIView *bottomView = [self.view viewWithTag:TAG_CartEmptyView + 1];
+    [bottomView removeFromSuperview];
+    
+    [self.myTableView removeFromSuperview];
+    
+    [self setupCartEmptyView];
+}
+
 - (void)setupCartEmptyView {
     //默认视图背景
     UIView *backgroundView = [[UIView alloc]initWithFrame:CGRectMake(0, LZNaigationBarHeight, LZSCREEN_WIDTH, LZSCREEN_HEIGHT - LZNaigationBarHeight)];
@@ -351,6 +362,10 @@
                 _allSellectedButton.selected = NO;
             }
             
+            if (self.dataArray.count == 0) {
+                [self changeView];
+            }
+            
             //如果删除的时候数据紊乱,可延迟0.5s刷新一下
             [self performSelector:@selector(reloadTable) withObject:nil afterDelay:0.5];
             
@@ -400,9 +415,14 @@
 }
 #pragma mark --- 确认选择,提交订单按钮点击事件
 - (void)goToPayButtonClick:(UIButton*)button {
-    for (LZCartModel *model in self.selectedArray) {
-        NSLog(@"选择的商品>>%@>>>%ld",model,(long)model.number);
+    if (self.selectedArray.count > 0) {
+        for (LZCartModel *model in self.selectedArray) {
+            NSLog(@"选择的商品>>%@>>>%ld",model,(long)model.number);
+        }
+    } else {
+        NSLog(@"你还没有选择任何商品");
     }
+    
 }
 
 - (void)didReceiveMemoryWarning {
