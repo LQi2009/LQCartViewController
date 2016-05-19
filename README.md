@@ -7,9 +7,6 @@
 - 价格计算
 - 商品删除
 
-
-###效果图
-![效果图](https://github.com/LQQZYY/CartDemo/blob/master/test.gif)
 ###说明
 本次更新,重新整理了代码,整体结构更清晰,方便在此基础上进行个人需求的定制
 - 整体布局脱离了对`Masnary`的依赖
@@ -114,6 +111,8 @@ BOOL _isHasNavitationController;//是否含有导航
 .h文件内的属性和方法,建议不要修改,可以直接使用;
 #####关于`ConfigFile`文件夹
 里面有三个文件,一个是`UIView`的扩展类目;一个是头文件,保存一些公共的宏定义和全局变量;
+###效果图
+![效果图](https://github.com/LQQZYY/CartDemo/blob/master/test.gif)
 ###总结
 购物车的逻辑其实并不复杂,但是总体来说还是有一定的逻辑性的,重构这个`demo`也花了不少时间,希望对你能有所帮助,使用过程中如果有bug,或者功能上错误,或者一些新功能,或者其他的建议,请留言,我会第一时间采纳更新;
 #####如果对你有帮助,欢迎右上角`star`或者`fork`
