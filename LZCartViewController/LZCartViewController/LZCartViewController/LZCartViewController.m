@@ -2,9 +2,11 @@
 //  LZCartViewController.m
 //  LZCartViewController
 //
-//  Created by Artron_LQQ on 16/5/18.
-//  Copyright © 2016年 Artup. All rights reserved.
+//  Created by LQQ on 16/5/18.
+//  Copyright © 2016年 LQQ. All rights reserved.
 //  https://github.com/LQQZYY/CartDemo
+//  http://blog.csdn.net/lqq200912408
+//  QQ交流: 302934443
 
 #import "LZCartViewController.h"
 #import "LZConfigFile.h"
@@ -396,7 +398,7 @@
     button.selected = !button.selected;
     
     //点击全选时,把之前已选择的全部删除
-    for (LZCartModel *model in self.dataArray) {
+    for (LZCartModel *model in self.selectedArray) {
         model.select = NO;
     }
     
