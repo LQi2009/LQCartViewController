@@ -70,7 +70,10 @@
         [self.dataArray addObject:model];
     }
 }
-
+- (void)loadData {
+    [self creatData];
+    [self changeView];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -78,12 +81,13 @@
     _isHasTabBarController = self.tabBarController?YES:NO;
     _isHasNavitationController = self.navigationController?YES:NO;
     
-    [self creatData];
-    [self setupCustomNavigationBar];
+#warning 模仿请求数据,延迟2s加载数据
+    [self performSelector:@selector(loadData) withObject:nil afterDelay:2];
     
+    
+    [self setupCustomNavigationBar];
     if (self.dataArray.count > 0) {
         
-        [self setupCustomBottomView];
         [self setupCartView];
     } else {
         [self setupCartEmptyView];
@@ -223,12 +227,21 @@
 }
 #pragma mark -- 购物车为空时的默认视图
 - (void)changeView {
-    UIView *bottomView = [self.view viewWithTag:TAG_CartEmptyView + 1];
-    [bottomView removeFromSuperview];
-    
-    [self.myTableView removeFromSuperview];
-    
-    [self setupCartEmptyView];
+    if (self.dataArray.count > 0) {
+        UIView *view = [self.view viewWithTag:TAG_CartEmptyView];
+        if (view != nil) {
+            [view removeFromSuperview];
+        }
+        
+        [self setupCartView];
+    } else {
+        UIView *bottomView = [self.view viewWithTag:TAG_CartEmptyView + 1];
+        [bottomView removeFromSuperview];
+        
+        [self.myTableView removeFromSuperview];
+        self.myTableView = nil;
+        [self setupCartEmptyView];
+    }
 }
 
 - (void)setupCartEmptyView {
@@ -254,6 +267,9 @@
 }
 #pragma mark -- 购物车有商品时的视图
 - (void)setupCartView {
+    //创建底部视图
+    [self setupCustomBottomView];
+    
     UITableView *table = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
     
     table.delegate = self;
