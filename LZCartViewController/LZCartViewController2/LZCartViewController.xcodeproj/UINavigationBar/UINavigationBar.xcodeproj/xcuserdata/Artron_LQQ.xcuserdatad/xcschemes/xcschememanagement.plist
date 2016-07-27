@@ -4,27 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>LZCartViewController.xcscheme</key>
+		<key>UINavigationBar.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>9148CA611CEBFC8B0054A40A</key>
+		<key>91610F021D40798D0083FF5D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9148CA7A1CEBFC8C0054A40A</key>
+		<key>91610F1E1D40798D0083FF5D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9148CA851CEBFC8C0054A40A</key>
+		<key>91610F291D40798D0083FF5D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

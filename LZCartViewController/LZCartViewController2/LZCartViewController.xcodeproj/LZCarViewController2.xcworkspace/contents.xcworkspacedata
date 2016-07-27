@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:UINavigationBar"
+      name = "UINavigationBar">
+      <Group
+         location = "group:UINavigationBar"
+         name = "UINavigationBar">
+         <FileRef
+            location = "group:40fe711f9b754b596159f3a6.jpg">
+         </FileRef>
+         <FileRef
+            location = "group:AppDelegate.h">
+         </FileRef>
+         <FileRef
+            location = "group:AppDelegate.m">
+         </FileRef>
+         <Group
+            location = "group:Assets.xcassets"
+            name = "Assets.xcassets">
+            <Group
+               location = "group:AppIcon.appiconset"
+               name = "AppIcon.appiconset">
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:Base.lproj"
+            name = "Base.lproj">
+            <FileRef
+               location = "group:LaunchScreen.storyboard">
+            </FileRef>
+            <FileRef
+               location = "group:Main.storyboard">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+         <FileRef
+            location = "group:main.m">
+         </FileRef>
+         <Group
+            location = "group:UINavigationBar"
+            name = "UINavigationBar">
+            <FileRef
+               location = "group:LZNavigationTool.h">
+            </FileRef>
+            <FileRef
+               location = "group:LZNavigationTool.m">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:UINavigationBar.xcdatamodeld">
+         </FileRef>
+         <FileRef
+            location = "group:ViewController.h">
+         </FileRef>
+         <FileRef
+            location = "group:ViewController.m">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:UINavigationBar.xcodeproj">
+      </FileRef>
+      <Group
+         location = "group:UINavigationBarTests"
+         name = "UINavigationBarTests">
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+         <FileRef
+            location = "group:UINavigationBarTests.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:UINavigationBarUITests"
+         name = "UINavigationBarUITests">
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+         <FileRef
+            location = "group:UINavigationBarUITests.m">
+         </FileRef>
+      </Group>
+   </Group>
+   <FileRef
+      location = "container:">
+   </FileRef>
+</Workspace>

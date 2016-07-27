@@ -21,7 +21,7 @@
                                 <rect key="frame" x="236" y="278" width="129" height="44"/>
                                 <color key="backgroundColor" red="0.31393986051067635" green="1" blue="0.75100058714625284" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="129" id="H3h-MU-d3J"/>
+                                    <constraint firstAttribute="width" constant="129" id="iGk-3l-tIL"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -31,9 +31,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5xk-BU-P6e" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JNK-0J-wal"/>
-                            <constraint firstItem="5xk-BU-P6e" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="258" id="MlD-u7-WhB"/>
-                            <constraint firstItem="5xk-BU-P6e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dHA-Li-zYr"/>
+                            <constraint firstItem="5xk-BU-P6e" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="258" id="2za-K8-heO"/>
+                            <constraint firstItem="5xk-BU-P6e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QZu-XZ-iyN"/>
+                            <constraint firstItem="5xk-BU-P6e" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wNm-pT-BBH"/>
                         </constraints>
                     </view>
                 </viewController>
