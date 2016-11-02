@@ -107,7 +107,7 @@
     _isHasTabBarController = self.tabBarController?YES:NO;
     _isHasNavitationController = self.navigationController?YES:NO;
     
-#warning 模仿请求数据,延迟2s加载数据
+#warning 模仿请求数据,延迟2s加载数据,实际使用时请移除更换
     [self performSelector:@selector(loadData) withObject:nil afterDelay:2];
     
     
@@ -224,14 +224,14 @@
     //结算按钮
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.backgroundColor = BASECOLOR_RED;
-    btn.frame = CGRectMake(LZSCREEN_WIDTH - 100, 0, 100, LZTabBarHeight);
+    btn.frame = CGRectMake(LZSCREEN_WIDTH - 80, 0, 80, LZTabBarHeight);
     [btn setTitle:@"去结算" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(goToPayButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [backgroundView addSubview:btn];
     
     //合计
     UILabel *label = [[UILabel alloc]init];
-    label.font = [UIFont systemFontOfSize:18];
+    label.font = [UIFont systemFontOfSize:16];
     label.textColor = [UIColor redColor];
     [backgroundView addSubview:label];
     
@@ -338,7 +338,7 @@
     
     __block typeof(cell)wsCell = cell;
     
-    [cell LZNumberAddWithBlock:^(NSInteger number) {
+    [cell numberAddWithBlock:^(NSInteger number) {
         wsCell.lzNumber = number;
         model.count = number;
         
@@ -350,7 +350,7 @@
         }
     }];
     
-    [cell LZNumberCutWithBlock:^(NSInteger number) {
+    [cell numberCutWithBlock:^(NSInteger number) {
         
         wsCell.lzNumber = number;
         model.count = number;
@@ -365,7 +365,7 @@
         }
     }];
     
-    [cell LZCellSelectedWithBlock:^(BOOL select) {
+    [cell cellSelectedWithBlock:^(BOOL select) {
         
         model.select = select;
         if (select) {
@@ -380,7 +380,7 @@
         [self countPrice];
     }];
     
-    [cell LZReloadDataWithModel:model];
+    [cell reloadDataWithModel:model];
     return cell;
 }
 

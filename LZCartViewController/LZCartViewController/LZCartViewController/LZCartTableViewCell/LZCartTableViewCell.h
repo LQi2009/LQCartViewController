@@ -18,8 +18,8 @@ typedef void(^LZCellSelectedBlock)(BOOL select);
 @property (assign,nonatomic)NSInteger lzNumber;
 @property (assign,nonatomic)BOOL lzSelected;
 
-- (void)LZReloadDataWithModel:(LZCartModel*)model;
-- (void)LZNumberAddWithBlock:(LZNumberChangedBlock)block;
-- (void)LZNumberCutWithBlock:(LZNumberChangedBlock)block;
-- (void)LZCellSelectedWithBlock:(LZCellSelectedBlock)block;
+- (void)reloadDataWithModel:(LZCartModel*)model;
+- (void)numberAddWithBlock:(LZNumberChangedBlock)block;
+- (void)numberCutWithBlock:(LZNumberChangedBlock)block;
+- (void)cellSelectedWithBlock:(LZCellSelectedBlock)block;
 @end

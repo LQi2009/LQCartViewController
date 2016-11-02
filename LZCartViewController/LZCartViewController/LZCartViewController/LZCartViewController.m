@@ -198,7 +198,7 @@
     //结算按钮
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.backgroundColor = BASECOLOR_RED;
-    btn.frame = CGRectMake(LZSCREEN_WIDTH - 100, 0, 100, LZTabBarHeight);
+    btn.frame = CGRectMake(LZSCREEN_WIDTH - 80, 0, 80, LZTabBarHeight);
     [btn setTitle:@"去结算" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(goToPayButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [backgroundView addSubview:btn];
@@ -301,7 +301,7 @@
     LZCartModel *model = self.dataArray[indexPath.row];
     __block typeof(cell)wsCell = cell;
     
-    [cell LZNumberAddWithBlock:^(NSInteger number) {
+    [cell numberAddWithBlock:^(NSInteger number) {
         wsCell.lzNumber = number;
         model.number = number;
         
@@ -313,7 +313,7 @@
         }
     }];
     
-    [cell LZNumberCutWithBlock:^(NSInteger number) {
+    [cell numberCutWithBlock:^(NSInteger number) {
         
         wsCell.lzNumber = number;
         model.number = number;
@@ -328,7 +328,7 @@
         }
     }];
     
-    [cell LZCellSelectedWithBlock:^(BOOL select) {
+    [cell cellSelectedWithBlock:^(BOOL select) {
         
         model.select = select;
         if (select) {
@@ -346,7 +346,7 @@
         [self countPrice];
     }];
     
-    [cell LZReloadDataWithModel:model];
+    [cell reloadDataWithModel:model];
     return cell;
 }
 

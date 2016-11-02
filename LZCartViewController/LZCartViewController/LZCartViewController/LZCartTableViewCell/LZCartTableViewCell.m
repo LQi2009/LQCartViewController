@@ -58,7 +58,7 @@
     return self;
 }
 #pragma mark - public method
-- (void)LZReloadDataWithModel:(LZCartModel*)model {
+- (void)reloadDataWithModel:(LZCartModel*)model {
     
     self.lzImageView.image = model.image;
     self.nameLabel.text = model.nameStr;
@@ -69,15 +69,15 @@
     self.selectBtn.selected = model.select;
 }
 
-- (void)LZNumberAddWithBlock:(LZNumberChangedBlock)block {
+- (void)numberAddWithBlock:(LZNumberChangedBlock)block {
     numberAddBlock = block;
 }
 
-- (void)LZNumberCutWithBlock:(LZNumberChangedBlock)block {
+- (void)numberCutWithBlock:(LZNumberChangedBlock)block {
     numberCutBlock = block;
 }
 
-- (void)LZCellSelectedWithBlock:(LZCellSelectedBlock)block {
+- (void)cellSelectedWithBlock:(LZCellSelectedBlock)block {
     cellSelectedBlock = block;
 }
 #pragma mark - 重写setter方法
