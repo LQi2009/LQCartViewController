@@ -391,7 +391,7 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     LZTableHeaderView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"LZHeaderView"];
     LZShopModel *model = [self.dataArray objectAtIndex:section];
-    
+    NSLog(@">>>>>>%d", model.select);
     view.title = model.shopName;
     view.select = model.select;
     view.lzClickBlock = ^(BOOL select) {
@@ -557,6 +557,7 @@
     
     LZTableHeaderView *header = (LZTableHeaderView *)[self.myTableView headerViewForSection:section];
     header.select = isShopAllSelect;
+    tempShop.select = isShopAllSelect;
 }
 
 - (void)verityAllSelectState {
