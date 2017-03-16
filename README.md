@@ -1,15 +1,16 @@
-#LZCartViewController
+# LZCartViewController
 重新整理了之前的购物车逻辑,删除了部分代码,修改了部分方法,逻辑结构更清晰,复用更容易
 #####此demo的swift版本:[CartDemo_Swift](https://github.com/LQQZYY/CartDemo_Swift)
 
-###购物车功能
+# 本demo完整展示了购物车的处理逻辑, 及实现思路, 具体的业务处理, 还需要根据自己的需求来定制
+### 购物车功能
 
 - 商品展示
 - 商品选择
 - 价格计算
 - 商品删除
 
-###说明
+### 说明
 本次更新,重新整理了代码,整体结构更清晰,方便在此基础上进行个人需求的定制
 - 整体布局脱离了对`Masnary`的依赖
 如果需要使用`Masnary`,可重新设置控件坐标
@@ -63,7 +64,7 @@ BOOL _isHasNavitationController;//是否含有导航
     }
 }
 ```
-#####价格计算
+##### 价格计算
 价格的计算,这里我是直接遍历已选择的数组,取出其中的`Model`来计算的:
 ```Objective-C
 /**
@@ -83,7 +84,7 @@ BOOL _isHasNavitationController;//是否含有导航
     self.totlePriceLabel.text = [NSString stringWithFormat:@"￥%.2f",totlePrice];
 }
 ```
-###使用
+### 使用
 使用的时候直接将`demo`中的`LZCartViewController`文件夹下的文件拖进工程即可,注意不能直接使用,要根据自己的需求修改;
 #####关于控制器`LZCartViewController`
 建议直接使用我这个控制器`LZCartViewController`,里面我根据功能划分了几个区域,界面的东西修改为自己需要的,逻辑部分可以不用做太大的修改,添加上与服务器的交互及验证逻辑即可;
@@ -108,16 +109,16 @@ BOOL _isHasNavitationController;//是否含有导航
 - select:用来记录当前数据是否被选中;
 - number和price:用来计算总价;
 
-#####关于自定义单元格`LZCartTableViewCell`
+##### 关于自定义单元格`LZCartTableViewCell`
 建议直接修改界面布局为自己项目的设计,里面大部分的逻辑是不需要动的,除非你把网络请求的一些东西放到`cell`中来了;
 .h文件内的属性和方法,建议不要修改,可以直接使用;
-#####关于`ConfigFile`文件夹
+##### 关于`ConfigFile`文件夹
 里面有三个文件,一个是`UIView`的扩展类目;一个是头文件,保存一些公共的宏定义和全局变量;
-###效果图
+### 效果图
 ![效果图](https://github.com/LQQZYY/CartDemo/blob/master/test.gif)
 ![增加分组效果图](https://github.com/LQQZYY/CartDemo/blob/master/testttt.gif)
-###总结
-购物车的逻辑其实并不复杂,但是总体来说还是有一定的逻辑性的,重构这个`demo`也花了不少时间,希望对你能有所帮助,使用过程中如果有bug,或者功能上错误,或者一些新功能,或者其他的建议,请留言,我会第一时间采纳更新;
-#####如果对你有帮助,欢迎右上角`star`或者`fork`
-#####本人[CSDN博客](http://blog.csdn.net/lqq200912408),欢迎访问,一同学习!!!!
-#####[简书地址](http://www.jianshu.com/users/2846c3d3a974/latest_articles),目前文章还不多,慢慢的会发一些学习总结,欢迎关注!
+### 总结
+购物车的逻辑其实并不复杂,重构这个`demo`也花了不少时间,希望对你能有所帮助,使用过程中如果有bug,或者功能上错误,或者一些新功能,或者其他的建议,请可以联系我302934443;
+#### 如果对你有帮助,欢迎右上角`star`或者`fork`
+##### 本人[CSDN博客](http://blog.csdn.net/lqq200912408),欢迎访问,一同学习!!!!
+##### [简书地址](http://www.jianshu.com/users/2846c3d3a974/latest_articles),目前文章还不多,慢慢的会发一些学习总结,欢迎关注!
