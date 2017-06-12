@@ -86,9 +86,9 @@ BOOL _isHasNavitationController;//是否含有导航
 ```
 ### 使用
 使用的时候直接将`demo`中的`LZCartViewController`文件夹下的文件拖进工程即可,注意不能直接使用,要根据自己的需求修改;
-#####关于控制器`LZCartViewController`
+##### 关于控制器`LZCartViewController`
 建议直接使用我这个控制器`LZCartViewController`,里面我根据功能划分了几个区域,界面的东西修改为自己需要的,逻辑部分可以不用做太大的修改,添加上与服务器的交互及验证逻辑即可;
-- 关于数据模型`LZCartModel`
+##### 关于数据模型`LZCartModel`
 数据模型这里肯定是要根据自己的需求进行定制的,这里我创建的模型是这样的:
 
 ```Objective-C
